@@ -10,6 +10,8 @@ public class AppDbContext : DbContext
 
     public DbSet<EmployeeEntity> Employees { get; set; } = null!;
 
+    public DbSet<ItemEntity> Items { get; set; } = null!;
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         // 接続文字列（サーバー名、DB名、ユーザー名、パスワード）
