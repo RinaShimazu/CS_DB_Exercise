@@ -15,6 +15,8 @@ public class DepartmentEntity
     [Column("name")]
     public string? Name { get; set; }
 
+    public List<EmployeeEntity>? Employees { get; set; }
+
 
     public override string? ToString()
     {

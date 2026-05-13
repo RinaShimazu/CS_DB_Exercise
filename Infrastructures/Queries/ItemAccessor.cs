@@ -1,4 +1,4 @@
-using CS_DB_Exercise.Infrastructures.Entities;
+/*using CS_DB_Exercise.Infrastructures.Entities;
 using CS_DB_Exercise.Infrastructures.Contexts;
 namespace CS_DB_Exercise.Infrastructures.Queries;
 /// <summary>
@@ -33,4 +33,4 @@ public class ItemAccessor
         .ToList();
         return items;
     }
-}
+}*/

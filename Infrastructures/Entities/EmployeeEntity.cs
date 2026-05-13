@@ -1,6 +1,9 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
+using CS_DB_Exercise.Infrastructures.Accessors;
+using CS_DB_Exercise.Infrastructures.Contexts;
+
 namespace CS_DB_Exercise.Infrastructures.Entities;
 
 [Table("employee")]
@@ -8,6 +11,7 @@ namespace CS_DB_Exercise.Infrastructures.Entities;
 public class EmployeeEntity
 {
     [Key]
+    [Column("id")]
     public int Id { get; set; }
 
     [Column("name")]
@@ -16,6 +20,8 @@ public class EmployeeEntity
     [Column("dept_id")]
     public int DeptId { get; set; }
 
+    [ForeignKey("DeptId")]
+    public DepartmentEntity? Department { get; set; }
 
     public override string? ToString()
     {
